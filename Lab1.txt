@@ -1,0 +1,33 @@
+Question 1:
+
+public class Opdemo1 {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int ans = (a > b) ? a : b;
+		System.out.println(ans);
+
+	}
+
+}
+Output: 240
+	600
+	600
+
+Question 2:
+
+public class Opdemo1 {
+
+	public static void main(String[] args) 
+	{
+		int num = 100;
+		int result = (num>>2) & 20;
+		System.out.println("result:" + result);
+
+	}
+
+}
+Output: result:16
