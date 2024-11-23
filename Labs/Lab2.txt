@@ -1,0 +1,61 @@
+Question-1: a) Using conditional Statement
+package com.demo;
+public class IfElse {
+
+	public static void main(String[] args) 
+	{
+		int first = 30;
+		int second = 50;
+		if(first > second) {
+			System.out.println("Greatest value:"+ first);		
+		}
+		if(second > first) {
+		System.out.println("Greatest value:"+ second);
+		}
+	}
+}
+Output: Greatest value:50
+
+b) Using ternary operator
+package com.demo;
+public class Opdemo1 {
+
+	public static void main(String[] args) 
+	{
+		int a = 40;
+		int b = 70;
+		int ans = (a > b) ? a : b;
+		System.out.println("Greatest value: " + ans);
+
+	}
+}
+Output: Greatest value:70
+
+Question-2:
+package com.demo;
+
+public class Opdemo1 {
+
+	public static void main(String[] args) {
+	int number = 100; 
+
+        int leftShift1 = number << 1;
+        
+        int leftShift2 = number << 2; 
+        
+        int rightShift1 = number >> 1;
+        
+        int rightShift2 = number >> 2;
+
+        System.out.println("Original number: " + number);
+        System.out.println("Left shift by 1: " + leftShift1);
+        System.out.println("Left shift by 2: " + leftShift2);
+        System.out.println("Right shift by 1: " + rightShift1);
+        System.out.println("Right shift by 2: " + rightShift2);
+	}
+}
+Output: Original number: 100
+	Left shift by 1: 200
+	Left shift by 2: 400
+	Right shift by 1: 50
+	Right shift by 2: 25
