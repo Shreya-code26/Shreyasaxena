@@ -1,0 +1,164 @@
+Question-1:
+package com.demo1;
+
+//Superclass
+class HillStations {
+ public void location() {
+     System.out.println("Hill Station Location: ");
+ }
+
+ public void famousFor() {
+     System.out.println("Famous for: ");
+ }
+}
+
+//Subclass: Manali
+class Manali extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Manali is located in Himachal Pradesh.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Manali is famous for adventure sports and shopping.");
+ }
+}
+
+//Subclass: Mussoorie
+class Mussoorie extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Mussoorie is located in Uttarakhand.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Mussoorie is famous for natural beauty and colonial-era charm.");
+ }
+}
+
+//Subclass: Gulmarg
+class Gulmarg extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Gulmarg is located in Jammu and Kashmir.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Gulmarg is famous for its snow-clad mountains.");
+ }
+}
+
+//Main class
+public class HillStationsDemo {
+ public static void main(String[] args) {
+     //the base class method is invoked at runtime.
+     HillStations hillStation;
+
+     hillStation = new Manali();
+     hillStation.location();
+     hillStation.famousFor();
+
+     hillStation = new Mussoorie();
+     hillStation.location();
+     hillStation.famousFor();
+
+     hillStation = new Gulmarg();
+     hillStation.location();
+     hillStation.famousFor();
+
+     //call the location() and famousFor() method by the all subclass
+     Manali manali = new Manali();
+     manali.location();
+     manali.famousFor();
+
+     Mussoorie mussoorie = new Mussoorie();
+     mussoorie.location();
+     mussoorie.famousFor();
+
+     Gulmarg gulmarg = new Gulmarg();
+     gulmarg.location();
+     gulmarg.famousFor();
+ }
+}
+
+
+Output:
+
+Manali is located in Himachal Pradesh.
+Manali is famous for adventure sports and shopping.
+Mussoorie is located in Uttarakhand.
+Mussoorie is famous for natural beauty and colonial-era charm.
+Gulmarg is located in Jammu and Kashmir.
+Gulmarg is famous for its snow-clad mountains.
+Manali is located in Himachal Pradesh.
+Manali is famous for adventure sports and shopping.
+Mussoorie is located in Uttarakhand.
+Mussoorie is famous for natural beauty and colonial-era charm.
+Gulmarg is located in Jammu and Kashmir.
+Gulmarg is famous for its snow-clad mountains.
+
+
+Question-2:
+package com.demo1;
+
+import java.util.Scanner;
+
+//Superclass
+class Animal {
+ public void makeSound() {
+     System.out.println("The animal makes a sound.");
+ }
+}
+
+//Subclass: Dog
+class Dog extends Animal {
+ @Override
+ public void makeSound() {
+     System.out.println("Dog braks");
+ }
+}
+
+//Subclass: Cat
+class Cat extends Animal {
+ @Override
+ public void makeSound() {
+     System.out.println("Cat says meow");
+ }
+}
+
+public class AnimalDemo {
+ public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+     System.out.println("Choose an animal:");
+     System.out.println("1) Dog");
+     System.out.println("2) Cat");
+     System.out.print("Enter your choice: ");
+     int choice = scanner.nextInt();
+
+     Animal animal;
+     if (choice == 1) {
+         animal = new Dog();
+     } else if (choice == 2) {
+         animal = new Cat();
+     } else {
+         System.out.println("please enter valid choice.");
+         animal = new Animal();
+     }
+
+     animal.makeSound();
+
+ }
+}
+
+
+Input:
+Choose an animal:
+1) Dog
+2) Cat
+Enter your choice: 2
+
+Output:
+Cat says meow

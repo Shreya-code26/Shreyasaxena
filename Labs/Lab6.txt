@@ -1,0 +1,92 @@
+Question-1:
+package com.demo1;
+import java.util.ArrayList;
+
+class Book {
+    private int bookId;
+    private String bookName;
+    private String authorName;
+
+    // Parameterized constructor to initialize the book object
+    public Book(int bookId, String bookName, String authorName) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.authorName = authorName;
+    }
+
+    // Getter methods to retrieve book details
+    public int getBookId() {
+        return bookId;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    @Override
+    public String toString() {
+        return "Book ID: " + bookId + ", Book Name: " + bookName + ", Author Name: " + authorName;
+    }
+}
+
+public class BookCollectionDemo {
+    public static void main(String[] args) {
+        // Create an ArrayList of type Book
+        ArrayList<Book> bookList = new ArrayList<>();
+
+        // Adding Book objects to the ArrayList
+        bookList.add(new Book(1, "Mathematics", "RD Sharma"));
+        bookList.add(new Book(2, "Script", "John"));
+        bookList.add(new Book(3, "Python", "William"));
+
+        // Displaying all book details
+        System.out.println("Book Collection:");
+        for (Book book : bookList) {
+            System.out.println(book);
+        }
+    }
+}
+
+Output:
+Book Collection:
+Book ID: 1, Book Name: Mathemaics, Author Name: RD Sharma
+Book ID: 2, Book Name: Script, Author Name: John
+Book ID: 3, Book Name: Python, Author Name: William
+
+
+Question-2:
+package com.demo1;
+import java.util.ArrayList;
+
+public class EvenSumCalculator {
+    public static void main(String[] args) {
+        // Create an ArrayList with a mix of even and odd numbers
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(15);
+        numbers.add(20);
+        numbers.add(25);
+        numbers.add(30);
+        numbers.add(35);
+
+        // Calculate the sum of all even numbers
+        int evenSum = 0;
+        for (int number : numbers) {
+            if (number % 2 == 0) { // Check if the number is even
+                evenSum += number;
+            }
+        }
+
+        System.out.println("ArrayList: " + numbers);
+        System.out.println("Sum of even numbers: " + evenSum);
+    }
+}
+
+
+Output:
+ArrayList: [10, 15, 20, 25, 30, 35]
+Sum of even numbers: 60

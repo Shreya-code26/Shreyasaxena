@@ -1,0 +1,103 @@
+Question-1:
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Enter key (integer) for pair " + i + ": ");
+            int key = sc.nextInt();
+
+            // Consume the remaining newline
+            sc.nextLine();
+
+            System.out.println("Enter value (string) for key " + key + ": ");
+            String value = sc.nextLine();
+
+            // Put the key-value pair into the HashMap
+            map.put(key, value);
+        }
+
+        // Display the HashMap
+        System.out.println("HashMap contents: " + map);
+
+    }
+}
+
+
+Output:
+Enter key (integer) for pair 1: 
+1
+Enter value (string) for key 101: 
+Apple
+Enter key (integer) for pair 2: 
+2
+Enter value (string) for key 102: 
+Mango
+Enter key (integer) for pair 3: 
+3
+Enter value (string) for key 103: 
+Banana
+Enter key (integer) for pair 4: 
+4
+Enter value (string) for key 104: 
+Kiwi
+Enter key (integer) for pair 5: 
+5
+Enter value (string) for key 105: 
+Cherry
+Enter key (integer) for pair 6: 
+6
+Enter value (string) for key 106: 
+Orange
+Enter key (integer) for pair 7: 
+7
+Enter value (string) for key 107: 
+Grape
+Enter key (integer) for pair 8: 
+8
+Enter value (string) for key 108: 
+Papaya
+Enter key (integer) for pair 9: 
+9
+Enter value (string) for key 109: 
+Blueberry
+Enter key (integer) for pair 10: 
+10
+Enter value (string) for key 110: 
+Jackfruit
+
+HashMap contents: {1=Apple, 2=Mango, 3=Banana, 4=Kiwi, 5=Cherry, 6=Orange, 7=Grape, 8=Papaya, 9=Blueberry, 10=Jackfruit}
+
+
+Question-2:
+import java.util.HashMap;
+
+public class HashMapCheckEmpty {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();y
+        if (map.isEmpty()) {
+            System.out.println("The HashMap is empty.");
+        } else {
+            System.out.println("The HashMap contains key-value mappings.");
+        }
+
+        // Adding some entries to the HashMap
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+
+        // Check again if the HashMap is empty after adding elements
+        if (map.isEmpty()) {
+            System.out.println("The HashMap is empty.");
+        } else {
+            System.out.println("The HashMap contains key-value mappings.");
+        }
+    }
+}
+
+Output:
+The HashMap is empty.
+The HashMap contains key-value mappings.
+

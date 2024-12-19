@@ -1,0 +1,91 @@
+Question-1:
+
+package com.demo;
+import java.util.Scanner;
+
+public class LeapYearCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    System.out.println(year + " is a leap year.");
+                } else {
+                    System.out.println(year + " is not a leap year.");
+                }
+            } else {
+                System.out.println(year + " is a leap year.");
+            }
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+Input:
+Enter a year: 2000
+
+Output:
+2000 is a leap year.
+
+
+Question-2:
+
+package com.demo;
+
+// Parent Class: User
+class User {
+    private String name;
+    private int age;
+
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+// Child Class: Employee
+class Employee extends User {
+    private double salary;
+
+    public Employee(String name, int age, double salary) {
+        super(name, age); // Call to parent class constructor
+        this.salary = salary;
+    }
+
+    public void displaySalaryDetails() {
+        // Access parent class details
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Salary: $" + salary);
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        // Create an Employee object
+        Employee employee = new Employee("Rohan Sharma", 26, 55000);
+
+        // Access parent class details and display salary details
+        employee.displaySalaryDetails();
+    }
+}
+
+Output:
+Name: Rohan Sharma
+Age: 26
+Salary: $55000.0
